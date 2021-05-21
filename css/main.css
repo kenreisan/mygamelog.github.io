@@ -1,0 +1,150 @@
+
+/*
+html{
+    display: table;
+    width: 100%;
+}
+
+body{
+    font-family: 'Open Sans Condensed', sans-serif;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #003000;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+button{ /*unico boton por ahora*//*
+    background: none;
+    border: 2px solid;
+    border-color:  #e08000;
+    color: rgb(100, 100, 100);
+    border-radius: 10px;
+    padding: 1em 2em;
+    
+}
+
+button:hover {
+    border-color: #f0b000;
+    color: rgb(150, 150, 150);
+    box-shadow: 0 0 10px 3px #d05000;
+    transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.10s;
+}
+
+button:active {
+    border-color: rgb(255, 158, 93);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px 3px rgb(255, 200, 0);
+}
+*/
+
+/*color pallete*/
+
+
+body{
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-color: #a8dadc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.panel{
+    background-color: #f1faeeaa;
+    border-radius: 20px;
+    padding: 20px 20px;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.difficulty-level{
+    max-width: 80%;
+    height: auto;
+}
+
+.select-difficulty{
+    border-bottom: 1px solid #457b9d;
+}
+
+.select-difficulty:last-child{
+    border-bottom: none;
+}
+
+.difficulty-name{
+    border-top: 1px solid #a8dadc;
+    padding: 5px;
+    margin-bottom: 0px;
+    color: #457b9d;
+}
+
+.difficulty-description{
+    width: auto;
+    height: 100px;
+    border-top: 1px solid #a8dadc;
+    padding-top: 10px;
+    padding-left: 5px;
+    margin-top: 0px;
+    list-style: none;
+    color: #457b9daa;
+}
+
+.difficulty-description-item{
+    border-bottom: 1px solid #a8dadc55;
+}
+
+.difficulty-description-item:last-child{
+    border-bottom: none;
+}
+
+.difficulty-price{
+    color: #1d3557;
+    display: block;
+    font-weight: 900;
+    font-size: 32px;
+}
+
+.difficulty-button{
+    border: 1px solid #e63946;
+    border-radius: 10px;
+    color: #e63946;
+    display: inline-block;
+    padding: 15px 35px;
+    text-decoration: none;
+    margin: 25px;
+    transition: background-color 200ms ease-in-out;
+    transition: color 200ms ease-in-out;
+}
+
+.difficulty-button:hover{
+    background-color: #e63946;
+    color: white;
+}
+
+@media (min-width: 800px){
+    .panel{
+        flex-direction: row;
+    }
+
+    .select-difficulty{
+        border-bottom: none;
+        border-right: 1px solid #1d3557;
+        padding: 20px 20px;
+    }
+
+    .select-difficulty:last-child{
+        border-right: none;
+    }
+
+    .difficulty-price{
+        align-items: flex-end;
+    }
+}
