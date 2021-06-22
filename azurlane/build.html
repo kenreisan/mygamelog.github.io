@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+    
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="../css/azurLane.css">
+    
+        <title>AzurLane Building</title>
+      </head>
+
+      <body>
+        <nav id="mainNavbar" class="navbar fixed-top navbar-dark navbar-expand-lg mx-3">
+            <a href="../azurlane.html" class="navbar-brand"><span>AZUR</span>LANE</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navLinks">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link" style="color: steelblue;">BUILD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">FARMEABLE SHIPS</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="container-fluid seccion">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10 align-self-center d-flex justify-content-center">
+                    <div class="card my-3 shadow-lg" style="width: 50rem;">
+                        <img src="../media/imgs/TilteScreen.png" id="banner" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Building</h5>
+                            <p class="card-text">Simulador de construcci&oacute;n de barcos.</p>
+                            <div class="row">
+                                <div class="btn-group col-12 col-sm-6" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                                    <label class="btn btn-outline-primary" for="btnradio1">Event</label>
+                                
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btnradio2">Light</label>
+                                
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btnradio3">Heavy</label>
+
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btnradio4">Special</label>
+                                </div>
+                                <div class="col-sm-2 col-1"></div>
+                                <div class="col-sm-1 col-3 p-sm-0 p-3 d-flex justify-content-sm-end justify-content-left">
+                                    <button class="btn btn-primary" id="buildBtn">Build</button>
+                                </div>
+                                <div class="col-sm-3 col-6 p-sm-0 p-3">
+                                    <select class="form-select">
+                                        <!--   <option selected>Cantidad</option>     -->
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="orders">
+
+        </section>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script src="../js/build.js"></script>
+
+      </body>
+</html>

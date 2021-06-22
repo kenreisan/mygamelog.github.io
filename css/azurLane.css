@@ -1,0 +1,86 @@
+body{
+    background-color: skyblue;
+    font-family: "Nunito", sans-serif;
+}
+
+#mainNavbar {
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+#mainNavbar .nav-link{
+    color: snow;
+}
+
+#mainNavbar .nav-link:hover{
+    color: steelblue;
+}
+
+#mainNavbar .navbar-brand{
+    color: snow;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+#mainNavbar .navbar-brand span{
+    color: darkblue;
+}
+
+#headingGroup span{
+    color: darkblue;
+}
+
+#headingGroup h1{
+    font-weight: 100;
+}
+
+.contenido h2{
+    color: darkblue;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.contenido p{
+    color: darkblue;
+    font-size: 1.25rem;
+    font-weight: 100;
+}
+
+.seccion{
+    margin-top: 50px;
+}
+
+#mainNavbar{
+    background-color: skyblue;
+    transition: background-color 500ms;
+}
+
+.navbar.scrolled{
+    background-color: slategray;
+    transition: background-color 500ms;
+}
+
+.cuadroInvocacion{
+    color: snow;
+}
+
+@media (max-width: 5000px){
+    #headingGroup h1{
+        font-size: 4.5rem;
+        font-weight: 100;
+    }
+}
+
+@media (max-width: 1700px){
+    #headingGroup h1{
+        font-size: 3.5rem;
+        font-weight: 100;
+    }
+}
+
+@media (max-width: 1400px){
+    #headingGroup h1{
+        font-size: 2.7rem;
+        font-weight: 100;
+    }
+}
