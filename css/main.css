@@ -45,7 +45,8 @@ button:active {
 /*color pallete*/
 
 
-body{
+
+.body-panel{
     font-family: 'Open Sans Condensed', sans-serif;
     background-color: #a8dadc;
     display: flex;
