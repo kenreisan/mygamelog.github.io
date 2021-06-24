@@ -48,7 +48,7 @@
                             <h5 class="card-title">Building</h5>
                             <p class="card-text">Simulador de construcci&oacute;n de barcos.</p>
                             <div class="row">
-                                <div class="btn-group col-12 col-sm-6" role="group" aria-label="Basic radio toggle button group">
+                                <div class="btn-group col-12 col-sm-6 px-1" role="group" aria-label="Basic radio toggle button group">
                                     <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
                                     <label class="btn btn-outline-primary" for="btnradio1">Event</label>
                                 
@@ -59,14 +59,14 @@
                                     <label class="btn btn-outline-primary" for="btnradio3">Heavy</label>
 
                                     <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-                                    <label class="btn btn-outline-primary" for="btnradio4">Special</label>
+                                    <label class="btn btn-outline-primary px-2" for="btnradio4">Special</label>
                                 </div>
                                 <div class="col-sm-2 col-1"></div>
                                 <div class="col-sm-1 col-3 p-sm-0 p-3 d-flex justify-content-sm-end justify-content-left">
                                     <button class="btn btn-primary" id="buildBtn">Build</button>
                                 </div>
                                 <div class="col-sm-3 col-6 p-sm-0 p-3">
-                                    <select class="form-select">
+                                    <select class="form-select" id="shipsNum">
                                         <!--   <option selected>Cantidad</option>     -->
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -87,8 +87,14 @@
             </div>
         </section>
 
-        <section id="orders">
-
+        <section class="container-fluid">
+            <div class="row">
+                <div class="col-1 col-md-2 col-lg-3"></div>
+                <div class="col-sm-10 col-md-8 col-lg-6 col-10 d-flex align-self-center d-flex justify-content-center border border-secondary m-0 py-5 rounded-3 bg-white shadow-lg">
+                    <span id="orders"></span>
+                </div>
+                <div class="col-1"></div>
+            </div>
         </section>
 
 
