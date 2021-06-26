@@ -64,19 +64,75 @@ body{
     color: snow;
 }
 
-.orderShip{
+.Normal{
+    display: block;
+    float: left;
+    background-color: darkgray; /*color que puede usarse para la rareza de la ship*/
+    border-radius: 15px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    padding: 2px;
+    animation-name: spin;
+    animation-duration: 0.60s;
+    animation-timing-function: linear;
+  }
+
+.Elite{
+    display: block;
+    float: left;
+    background-image: linear-gradient(-45deg, plum, blueviolet, plum); ; /*color que puede usarse para la rareza de la ship*/
+    border-radius: 15px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    padding: 2px;
+    animation-name: spin;
+    animation-duration: 0.60s;
+    animation-timing-function: linear;
+  }
+
+.Rare{
+    display: block;
+    float: left;
+    background-color: skyblue; /*color que puede usarse para la rareza de la ship*/
+    border-radius: 15px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    padding: 2px;
+    animation-name: spin;
+    animation-duration: 0.60s;
+    animation-timing-function: linear;
+  }
+
+.SuperRare{
   display: block;
   float: left;
-  background-color: gold; /*color que puede usarse para la rareza de la ship*/
+  background-image: linear-gradient(-45deg, white, gold, white); ; /*color que puede usarse para la rareza de la ship*/
   border-radius: 15px;
   border-style: solid;
-  border-color: black;
+  border-color: rgb(123, 124, 61);
   border-width: 1px;
   padding: 2px;
   animation-name: spin;
   animation-duration: 0.60s;
   animation-timing-function: linear;
 }
+
+.UltraRare{
+    display: block;
+    float: left;
+    background-image: linear-gradient(-45deg, lime, aqua, violet, palegoldenrod); /*color que puede usarse para la rareza de la ship*/
+    border-radius: 15px;
+    border-style: solid;
+    border-color: goldenrod;
+    border-width: 1px;
+    padding: 2px;
+    animation-name: spin;
+    animation-duration: 0.60s;
+    animation-timing-function: linear;
+  }
 
 @keyframes spin {
     0% { transform: scale(0, 0); }
@@ -103,3 +159,4 @@ body{
         font-weight: 100;
     }
 }
+
