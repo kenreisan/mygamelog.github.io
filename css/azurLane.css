@@ -118,7 +118,6 @@ body{
   animation-name: spin;
   animation-duration: 0.60s;
   animation-timing-function: linear;
-  text-overflow: ellipsis;
 }
 
 .UltraRare{

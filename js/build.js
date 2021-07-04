@@ -128,33 +128,236 @@ const LIGHTPOOLSR = [
     [267,'Z46','SuperRare'],
 ]
 
+const HEAVYPOOLN = [
+    [192,'Aoba','Normal'],
+    [240,'Kln','Normal'],
+    [238,'Knigsberg','Normal'],
+    [239,'Karlsruhe','Normal'],
+    [193,'Kinugasa','Normal'],
+    [104,'Leander','Normal'],
+    [52,'Nevada','Normal'],
+    [53,'Oklahoma','Normal'],
+    [29,'Omaha','Normal'],
+    [39,'Pensacola','Normal'],
+    [30,'Raleigh','Normal'],
+]
+
+const HEAVYPOOLR = [
+    [106,'Ajax','Rare'],
+    [34,'Atlanta','Rare'],
+    [59,'California','Rare'],
+    [42,'Chicago','Rare'],
+    [210,'Ise','Rare'],
+    [121,'Kent','Rare'],
+    [123,'Norfolk','Rare'],
+    [41,'Northampton','Rare'],
+    [54,'Pennsylvania','Rare'],
+    [32,'Phoenix','Rare'],
+    [128,'Repulse','Rare'],
+    [120,'Shropshire','Rare'],
+    [122,'Suffolk','Rare'],
+    [337,'Sussex','Rare'],
+    [58,'Tennessee','Rare'],
+    [211,'Hyuuga','Rare'],
+    [44,'Portland','Rare'],
+    [241,'Leipzig','Rare'],
+]
+
+const HEAVYPOOLE = [
+    [336,'Abercrombie','Elite'],
+    [242,'Admiral_Hipper','Elite'],
+    [246,'Admiral_Graf_Spee','Elite'],
+    [55,'Arizona','Elite'],
+    [198,'Ashigara','Elite'],
+    [60,'Colorado','Elite'],
+    [245,'Deutschland','Elite'],
+    [124,'Dorsetshire','Elite'],
+    [352,'Dunkerque','Elite'],
+    [149,'Erebus','Elite'],
+    [126,'Exeter','Elite'],
+    [205,'Hiei','Elite'],
+    [383,'Hiei-chan','Elite'],
+    [43,'Houston','Elite'],
+    [45,'Indianapolis','Elite'],
+    [207,'Kirishima','Elite'],
+    [119,'London','Elite'],
+    [61,'Maryland','Elite'],
+    [132,'Nelson','Elite'],
+    [130,'Queen_Elizabeth','Elite'],
+    [127,'Renown','Elite'],
+    [133,'Rodney','Elite'],
+    [382,'Suzuya','Elite'],
+    [150,'Terror','Elite'],
+    [125,'York','Elite']
+]
+
+const HEAVYPOOLSR = [
+    [201,'Atago','SuperRare'],
+    [136,'Duke_of_York','SuperRare'],
+    [129,'Hood','SuperRare'],
+    [353,'Jean_Bart','SuperRare'],
+    [354,'Massachusetts','SuperRare'],
+    [320,'Mikasa','SuperRare'],
+    [364,'Minneapolis','SuperRare'],
+    [212,'Nagato','SuperRare'],
+    [63,'North_Carolina','SuperRare'],
+    [135,'Prince_of_Wales','SuperRare'],
+    [244,'Prinz_Eugen','SuperRare'],
+    [200,'Takao','SuperRare'],
+    [251,'Tirpitz','SuperRare'],
+    [131,'Warspite','SuperRare'],
+    [64,'Washington','SuperRare']
+]
+
+const SPECIALPOOLN = [
+    [192,'Aoba','Normal'],
+    [71,'Bogue','Normal'],
+    [140,'Hermes','Normal'],
+    [240,'Kln','Normal'],
+    [238,'Knigsberg','Normal'],
+    [239,'Karlsruhe','Normal'],
+    [193,'Kinugasa','Normal'],
+    [72,'Langley','Normal'],
+    [104,'Leander','Normal'],
+    [29,'Omaha','Normal'],
+    [39,'Pensacola','Normal'],
+    [30,'Raleigh','Normal'],
+    [75,'Ranger','Normal']
+]
+
+const SPECIALPOOLR = [
+    [106,'Ajax','Rare'],
+    [34,'Atlanta','Rare'],
+    [42,'Chicago','Rare'],
+    [121,'Kent','Rare'],
+    [70,'Long_Island','Rare'],
+    [123,'Norfolk','Rare'],
+    [41,'Northampton','Rare'],
+    [32,'Phoenix','Rare'],
+    [120,'Shropshire','Rare'],
+    [122,'Suffolk','Rare'],
+    [44,'Portland','Rare'],
+    [241,'Leipzig','Rare']
+]
+
+const SPECIALPOOLE = [
+    [384,'Akagi-chan','Elite'],
+    [144,'Ark_Royal','Elite'],
+    [376,'Chaser','Elite'],
+    [342,'Dace','Elite'],
+    [148,'Glorious','Elite'],
+    [78,'Hornet','Elite'],
+    [220,'Houston','Elite'],
+    [45,'Indianapolis','Elite'],
+    [396,'I-25','Elite'],
+    [339,'I-26','Elite'],
+    [397,'I-56','Elite'],
+    [340,'I-58','Elite'],
+    [146,'Victorious','SuperRare'],
+    [73,'Lexington','Elite'],
+    [80,'Vestal','Elite'],
+    [119,'London','Elite'],
+    [74,'Saratoga','Elite'],
+    [350,'Surcouf','Elite'],
+    [400,'U-522','Elite'],
+    [344,'U-557','Elite'],
+    [142,'Unicorn','Elite'],
+    [49,'Wichita','Elite'],
+    [76,'Yorktown','Elite'],
+    [385,'Zeppy','Elite']
+]
+
+const SPECIALPOOLSR = [
+    [356,'Centaur','SuperRare'],
+    [77,'Enterprise','SuperRare'],
+    [357,'Essex','SuperRare'],
+    [381,'I-13','SuperRare'],
+    [398,'I-168','SuperRare'],
+    [338,'I-19','SuperRare'],
+    [378,'Shangri-La','SuperRare'],
+    [228,'Shoukaku','SuperRare'],
+    [399,'U-101','SuperRare'],
+    [343,'U-47','SuperRare'],
+    [341,'U-81','SuperRare'],
+    [146,'Victorious','SuperRare'],
+    [229,'Zuikaku','SuperRare'],
+    [252,'Graf_Zeppelin','SuperRare'],
+    [145,'Illustrious','SuperRare'],
+    [230,'Taihou','SuperRare'],
+    [0,'New_Jersey','UltraRare'],
+    [0,'Shinano','UltraRare']
+]
+
+const NONEVENTPOOLE = [
+    [144,'Ark_Royal','Elite'],
+    [78,'Hornet','Elite'],
+    [220,'Houston','Elite'],
+    [45,'Indianapolis','Elite'],
+    [73,'Lexington','Elite'],
+    [80,'Vestal','Elite'],
+    [119,'London','Elite'],
+    [74,'Saratoga','Elite'],
+    [142,'Unicorn','Elite'],
+    [76,'Yorktown','Elite'],
+    [55,'Arizona','Elite'],
+    [149,'Erebus','Elite'],
+    [126,'Exeter','Elite'],
+    [132,'Nelson','Elite'],
+    [127,'Renown','Elite'],
+    [133,'Rodney','Elite'],
+    [150,'Terror','Elite'],
+    [125,'York','Elite']
+]
+
+const NONEVENTPOOLSR = [
+    [77,'Enterprise','SuperRare'],
+    [357,'Essex','SuperRare'],
+    [378,'Shangri-La','SuperRare'],
+    [145,'Illustrious','SuperRare'],
+    [201,'Atago','SuperRare'],
+    [129,'Hood','SuperRare'],
+    [135,'Prince_of_Wales','SuperRare'],
+    [244,'Prinz_Eugen','SuperRare'],
+    [200,'Takao','SuperRare'],
+    [131,'Warspite','SuperRare']
+]
+
+const EVENTPOOLE = [
+    [517,'Shirayuki','Elite'],
+    [517,'Kasumi','Elite'],
+]
+
+const EVENTPOOLSR = [
+    [517,'Kazagumo','SuperRare'],
+    [517,'Suruga','SuperRare'],
+    [517,'Ryuuhou','SuperRare']
+]
+
 let shipsNum = document.querySelector('#shipsNum');
 const banner = document.querySelector('#banner');
 const pool = document.getElementsByClassName('btn-check');
 
-
-
 document.querySelector('#btnradio1').addEventListener('click', function(){
     if (pool[0].checked === true){
-        banner.src = 'media/imgs/TilteScreen.png';
+        banner.src = 'media/imgs/eventBanner.png';
     }
 });
 
 document.querySelector('#btnradio2').addEventListener('click', function(){
     if (pool[1].checked === true){
-        banner.src = 'media/imgs/kirishima-horn-ships.png';
+        banner.src = 'media/imgs/lightBanner.png';
     }
 });
 
 document.querySelector('#btnradio3').addEventListener('click', function(){
     if (pool[2].checked === true){
-        banner.src = 'media/imgs/main-destroyers.png';
+        banner.src = 'media/imgs/heavyBanner.png';
     }
 });
 
 document.querySelector('#btnradio4').addEventListener('click', function(){
     if (pool[3].checked === true){
-        banner.src = 'media/imgs/tea-hermoione-perseus-chesire.png';
+        banner.src = 'media/imgs/specialBanner.png';
     }
 });
 
@@ -184,53 +387,69 @@ document.querySelector('#buildBtn').addEventListener('click', function(){
     }
 
     for (let i = 0; i<shipsNum.value; i++){
-
-        //document.querySelector('#orders').appendChild(document.createElement('div', {className: 'row'}, {id: 'row1'}));
         
         if (i > 4 && parrafo){ 
-            //document.querySelector('#orders').appendChild(document.createElement('div', {className: 'row'}, {id: 'row2'}));
             document.querySelector('#orders').appendChild(document.createElement('p'));
             parrafo = false;
         }
 
-        let ship = document.createElement('img');
-        let shipLabel = document.createElement('label');
-        let division = document.createElement('div');
-        let division2 = document.createElement('div');
-        //let parrafo = document.createElement('p');
-        
-        let shipData = building(LIGHTPOOLN, LIGHTPOOLR, LIGHTPOOLE, LIGHTPOOLSR, 55, 26, 12);
-        
-        let shipId = shipData[0];
-        let shipName = shipData[1];
-        let shipRarity = shipData[2];
-        console.log(shipName);
-        console.log(shipId);
-        ship.src = `media/imgs/ships/70px-${shipName}Icon.png`;
-        //ship.className = shipRarity;
-        division.className = shipRarity
-        division.id = shipName + i;
-        division2.id = shipName + i + 'd';
-        division2.style = 'font-size:10px; align: center; text-overflow: ellipsis; width:66px;'
-        shipLabel.textContent = shipName;
-        //document.querySelector('#orders').appendChild(ship);
-        document.querySelector('#orders').appendChild(division);
-        document.querySelector('#'+ shipName + i).appendChild(ship);
-        document.querySelector('#'+ shipName + i).appendChild(division2);
-        //document.querySelector('#'+ shipName + i + 'd').appendChild(parrafo);
-        document.querySelector('#'+ shipName + i + 'd').appendChild(shipLabel);
+        if (pool[1].checked === true){
+            building(i, LIGHTPOOLN, LIGHTPOOLR, LIGHTPOOLE, LIGHTPOOLSR);
+        }else if(pool[2].checked === true){
+            building(i, HEAVYPOOLN, HEAVYPOOLR, HEAVYPOOLE, HEAVYPOOLSR);
+        }else if(pool[3].checked === true){
+            building(i, SPECIALPOOLN, SPECIALPOOLR, SPECIALPOOLE, SPECIALPOOLSR);
+        }else{
+            if (random(1) === 0){
+                if(random(1) === 0)
+                    building(i, HEAVYPOOLN.concat(SPECIALPOOLN), HEAVYPOOLR.concat(SPECIALPOOLR), EVENTPOOLE, EVENTPOOLSR);
+                else
+                    building(i, HEAVYPOOLN.concat(SPECIALPOOLN), HEAVYPOOLR.concat(SPECIALPOOLR), [[517,'Kinu','Elite']], [[517,'Noshiro','SuperRare']]);
+            }
+            else
+                building(i, SPECIALPOOLN.concat(SPECIALPOOLN), HEAVYPOOLR.concat(SPECIALPOOLR), NONEVENTPOOLE, NONEVENTPOOLSR);
+        }
     }
-    
 })
+
+function building(i, poolN, poolR, poolE, poolSR){
+    let ship = document.createElement('img');
+    let shipLabel = document.createElement('label');
+    let division = document.createElement('div');
+    let division2 = document.createElement('div');
+    //let parrafo = document.createElement('p');
+    
+    let shipData =buildingShip(poolN, poolR, poolE, poolSR);
+    
+    let shipId = shipData[0];
+    let shipName = shipData[1];
+    let shipRarity = shipData[2];
+    //console.log(shipName);
+    //console.log(shipId);
+    ship.src = `media/imgs/ships/70px-${shipName}Icon.png`;
+    //ship.className = shipRarity;
+    division.className = shipRarity
+    division.id = shipName + i;
+    division2.id = shipName + i + 'd';
+    division2.style = 'font-size:11px; width:70px; background-color: black; color: white; text-align: center; white-space: nowrap; overflow: clip;'
+    shipLabel.textContent = shipName;
+    //document.querySelector('#orders').appendChild(ship);
+    document.querySelector('#orders').appendChild(division);
+    document.querySelector('#'+ shipName + i).appendChild(ship);
+    document.querySelector('#'+ shipName + i).appendChild(division2);
+    //document.querySelector('#'+ shipName + i + 'd').appendChild(parrafo);
+    document.querySelector('#'+ shipName + i + 'd').appendChild(shipLabel);
+}
+
 
 function random(cant){
     //let number = Math.round(Math.random() * (LIGHTPOOL.length - 1));
     let number = Math.round(Math.random() * cant);
-    console.log(`random number: ${number}`)
+    //console.log(`random number: ${number}`)
     return number;
 }
 
-function building(normal, rare, elite, sr, rateCommon = 30, rateRare = 51, rateElite = 12){
+function buildingShip(normal, rare, elite, sr){
 
     let shipId;
     let rndNumber = random(100);
@@ -284,51 +503,12 @@ function building(normal, rare, elite, sr, rateCommon = 30, rateRare = 51, rateE
         shipId = random(normal.length - 1);
         return normal[shipId];
     }
-
-    /*
-    if (rndNumber <= rateCommon){
-        
-        shipId = random(normal.length - 1);
-        return normal[shipId];
-
-    }else if(rndNumber > rateCommon && rndNumber <= (rateCommon+rateRare)){
-
-        shipId = random(rare.length - 1);
-        return rare[shipId];
-
-    }else if((rateCommon+rateRare) > 81 && rndNumber <= (rateCommon+rateRare+rateElite)){
-
-        shipId = random(elite.length - 1);
-        return elite[shipId];
-
-    }else{
-
-        shipId = random(sr.length - 1);
-        return sr[shipId];
-    }*/
 }
-
-
-
-/*PARA ESTRUCTURAR MEJOR*/
-
-class Pool{
-    constructor(pool){
-        this.pool = pool;
-    }
-}
-
-class Ship{
-    constructor(time, rareza, nombre){
-        
-    }
-}
-//Funciones para pruebas
 
 function test(poolSelect){
     for (let i = Number(0); i<poolSelect.length; i++){
         let ship = document.createElement('img');
-        console.log(`[${i}-${poolSelect[i][0]}] - ${poolSelect[i][1]} length=${poolSelect.length}`);
+        //console.log(`[${i}-${poolSelect[i][0]}] - ${poolSelect[i][1]} length=${poolSelect.length}`);
         ship.src = `media/imgs/ships/70px-${poolSelect[i][1]}Icon.png`;
         ship.className = poolSelect[i][2];
         document.querySelector('#orders').appendChild(ship);
@@ -343,5 +523,8 @@ function testUltra(){
 }
 
 //testUltra()
-//test(LIGHTPOOL);
-//building(LIGHTPOOL);
+//test(HEAVYPOOLN);
+//test(HEAVYPOOLR);
+//test(HEAVYPOOLE);
+//test(HEAVYPOOLSR);
+//buildingShip(LIGHTPOOL);
