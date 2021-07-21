@@ -46,21 +46,15 @@
             <div class="row">
                 <div class="col-1"></div>
                 <div class="col-10 align-self-center d-flex justify-content-center">
-                    <div class="card my-3 shadow-lg" style="width: 50rem;">
+                    <div class="card my-3 shadow" style="width: 50rem;">
                         <img src="media/imgs/eventBanner.png" id="banner" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title dark">Azur Lane Gacha Simulator</h5>
+                            <h5 class="card-title dark">Azur Lane Gacha Simulator v 1.1</h5>
                             <div class="h6 fw-light ">
                                 <p class="card-text">
                                     This page simulates the gacha part of the game Azur Lane (Yostar) where you 'build' ships with the apparence of anime girls.
                                     <b>Shinano</b> y <b>New Jersey</b>
                                     ships can be get in the Special banner (in the game doesn't appear there).
-                                    <ul>
-                                        <li>7% Super Rare (gold color)</li>
-                                        <li>12% Elite (purple color)</li>
-                                        <li>51% Rare (blue color)</li>
-                                        <li>30% Common (gray color)</li>
-                                    </ul>
                                 </p>
                             </div>
                             <div class="row">
@@ -98,6 +92,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row pb-1">
+                            <div class="col-1"></div>
+                            <div class="col-2"><button class="btn btn-secondary btn-sm" id="resetCounters">Reset</button></div>
+                            <div class="col-1"><img src="media/imgs/ships/25px-Coreicon2.png" id="wisdomCubes" alt="..."></div>
+                            <dir class="col-2"><label id="cubesAmount">0</label></dir>
+                            <div class="col-1"><img src="media/imgs/ships/25px-Coinicon.png" id="coins" alt="..."></div>
+                            <dir class="col-2"><label id="coinsAmount">0</label></dir>
+                            <div class="col-3"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -125,9 +128,19 @@
                             <p class="py-0">
                                 <b>What is this?</b> A gacha game is like a lottery, is based on the toy vending machines where you introduce
                                 a coin then turn a lever and the machine pop out a capsule.
-                                This ships have rarity which determines the chance to get'em. The math behind this app doesn't work like the game
+                                These ships have rarity which determines the chance to get'em. The math behind this app doesn't work like the game
                                 (still working on it) and the pools can contain ships that doesn't really appears in them. So use this app just for fun.
                             </p>
+                        </div>
+                        <div>
+                            <b>The construct rates in the game are:</b><p>
+                            <ul>
+                                <li>7% Super Rare (gold color)</li>
+                                <li>12% Elite (purple color)</li>
+                                <li>51% Rare (blue color)</li>
+                                <li>30% Common (gray color)</li>
+                            </ul>
+                        </p>
                         </div>
                     </div>
                 </div>

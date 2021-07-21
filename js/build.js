@@ -334,8 +334,12 @@ const EVENTPOOLSR = [
 ]
 
 let shipsNum = document.querySelector('#shipsNum');
+let totalCoins = 0;
+let totalCubes = 0;
+
 const banner = document.querySelector('#banner');
 const pool = document.getElementsByClassName('btn-check');
+
 
 document.querySelector('#btnradio1').addEventListener('click', function(){
     if (pool[0].checked === true){
@@ -361,6 +365,15 @@ document.querySelector('#btnradio4').addEventListener('click', function(){
     }
 });
 
+document.querySelector('#resetCounters').addEventListener('click', function(){
+    totalCoins = 0;
+    totalCubes = 0;
+    document.querySelector('#coinsAmount').innerHTML = totalCoins;
+    document.querySelector('#cubesAmount').innerHTML = totalCubes;
+});
+
+
+
 /* CONSTRUCCTION RATES 
  * Super Rare 7%
  * Elite 12%
@@ -378,8 +391,22 @@ document.querySelector('#buildBtn').addEventListener('click', function(){
 
     let parrafo = true;
     let ordenes = document.getElementById('orders');
-
     let child = ordenes.lastElementChild;
+
+    
+    if(pool[1].checked === true){
+        totalCoins = totalCoins + (600 * shipsNum.value);
+        totalCubes = totalCubes + (1 * shipsNum.value);
+        document.querySelector('#coinsAmount').innerHTML = totalCoins;
+        document.querySelector('#cubesAmount').innerHTML = totalCubes;
+    }else{
+        totalCoins = totalCoins + (1500 * shipsNum.value);
+        totalCubes = totalCubes + (2 * shipsNum.value);
+        document.querySelector('#coinsAmount').innerHTML = totalCoins;
+        document.querySelector('#cubesAmount').innerHTML = totalCubes;
+    }
+
+
 
     while (child){
         ordenes.removeChild(child);
