@@ -323,14 +323,14 @@ const NONEVENTPOOLSR = [
 ]
 
 const EVENTPOOLE = [
-    [517,'Shirayuki','Elite'],
-    [517,'Kasumi','Elite'],
+    [517,'Ami_Futami','Elite'],
+    [517,'Mami_Futami','Elite'],
 ]
 
 const EVENTPOOLSR = [
-    [517,'Kazagumo','SuperRare'],
-    [517,'Suruga','SuperRare'],
-    [517,'Ryuuhou','SuperRare']
+    [517,'Chihaya_Kisaragi','SuperRare'],
+    [517,'Haruka_Amami','SuperRare'],
+    [517,'Iori_Minase','SuperRare']
 ]
 
 let shipsNum = document.querySelector('#shipsNum');
@@ -431,7 +431,7 @@ document.querySelector('#buildBtn').addEventListener('click', function(){
                 if(random(1) === 0)
                     building(i, HEAVYPOOLN.concat(SPECIALPOOLN), HEAVYPOOLR.concat(SPECIALPOOLR), EVENTPOOLE, EVENTPOOLSR);
                 else
-                    building(i, HEAVYPOOLN.concat(SPECIALPOOLN), HEAVYPOOLR.concat(SPECIALPOOLR), [[517,'Kinu','Elite']], [[517,'Noshiro','SuperRare']]);
+                    building(i, HEAVYPOOLN.concat(SPECIALPOOLN), HEAVYPOOLR.concat(SPECIALPOOLR), EVENTPOOLE, [[517,'Azusa_Miura','SuperRare']]);
             }
             else
                 building(i, SPECIALPOOLN.concat(SPECIALPOOLN), HEAVYPOOLR.concat(SPECIALPOOLR), NONEVENTPOOLE, NONEVENTPOOLSR);
@@ -554,4 +554,6 @@ function testUltra(){
 //test(HEAVYPOOLR);
 //test(HEAVYPOOLE);
 //test(HEAVYPOOLSR);
+//test(EVENTPOOLE);
+//test(EVENTPOOLSR);
 //buildingShip(LIGHTPOOL);
