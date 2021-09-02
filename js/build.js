@@ -74,6 +74,7 @@ const LIGHTPOOLR = [
     [264,'Z19','Rare'],
     [263,'Bailey','Rare'],
     [18,'Benson','Rare'],
+    [333,'Michishio','Rare'],
 ]
 
 const LIGHTPOOLE = [
@@ -322,16 +323,25 @@ const NONEVENTPOOLSR = [
     [131,'Warspite','SuperRare']
 ]
 
+const EVENTPOOLR = [
+    [999,'Marblehead','Rare'],      //5%
+]
+
 const EVENTPOOLE = [
-    [517,'Ami_Futami','Elite'],
-    [517,'Mami_Futami','Elite'],
+    [999,'Cooper','Elite'],         //2.5%
+    [999,'Nautilus','Elite'],       //2.5%5%
 ]
 
 const EVENTPOOLSR = [
-    [517,'Chihaya_Kisaragi','SuperRare'],
-    [517,'Haruka_Amami','SuperRare'],
-    [517,'Iori_Minase','SuperRare']
+    [999,'Intrepid','SuperRare'],   //2%
+    [999,'Reno','SuperRare'],       //2%
+    [999,'Ingraham','SuperRare'],   //2%
+    [999,'Bremerton','SuperRare'],   //0.5%
 ]
+
+let rareRate = 10;
+let eliteRate = 5;
+let srRate = 4;
 
 let shipsNum = document.querySelector('#shipsNum');
 let totalCoins = 0;
@@ -379,6 +389,7 @@ document.querySelector('#resetCounters').addEventListener('click', function(){
  * Elite 12%
  * Rare 51%
  * Common 30%
+ * 
  * Super Rare Focused 2%
  * Super Rare Exchange Focused 0.5%
  * Elite Focused 2.5%
@@ -421,118 +432,134 @@ document.querySelector('#buildBtn').addEventListener('click', function(){
         }
 
         if (pool[1].checked === true){
-            building(i, LIGHTPOOLN, LIGHTPOOLR, LIGHTPOOLE, LIGHTPOOLSR);
+            building(i, LIGHTPOOLN, LIGHTPOOLR, LIGHTPOOLE, LIGHTPOOLSR, false);
         }else if(pool[2].checked === true){
-            building(i, HEAVYPOOLN, HEAVYPOOLR, HEAVYPOOLE, HEAVYPOOLSR);
+            building(i, HEAVYPOOLN, HEAVYPOOLR, HEAVYPOOLE, HEAVYPOOLSR, false);
         }else if(pool[3].checked === true){
-            building(i, SPECIALPOOLN, SPECIALPOOLR, SPECIALPOOLE, SPECIALPOOLSR);
+            building(i, SPECIALPOOLN, SPECIALPOOLR, SPECIALPOOLE, SPECIALPOOLSR, false);
         }else{
-            if (random(1) === 0){
-                if(random(1) === 0)
-                    building(i, HEAVYPOOLN.concat(SPECIALPOOLN), HEAVYPOOLR.concat(SPECIALPOOLR), EVENTPOOLE, EVENTPOOLSR);
-                else
-                    building(i, HEAVYPOOLN.concat(SPECIALPOOLN), HEAVYPOOLR.concat(SPECIALPOOLR), EVENTPOOLE, [[517,'Azusa_Miura','SuperRare']]);
-            }
-            else
-                building(i, SPECIALPOOLN.concat(SPECIALPOOLN), HEAVYPOOLR.concat(SPECIALPOOLR), NONEVENTPOOLE, NONEVENTPOOLSR);
+            building(i, SPECIALPOOLN, HEAVYPOOLR.concat(SPECIALPOOLR), NONEVENTPOOLE, NONEVENTPOOLSR, true);
         }
     }
 })
 
-function building(i, poolN, poolR, poolE, poolSR){
+function building(i, poolN, poolR, poolE, poolSR, isEvent){
     let ship = document.createElement('img');
     let shipLabel = document.createElement('label');
     let division = document.createElement('div');
     let division2 = document.createElement('div');
-    //let parrafo = document.createElement('p');
-    
-    let shipData =buildingShip(poolN, poolR, poolE, poolSR);
-    
-    let shipId = shipData[0];
+    let shipData = buildingShip(poolN, poolR, poolE, poolSR, isEvent);
     let shipName = shipData[1];
     let shipRarity = shipData[2];
-    //console.log(shipName);
-    //console.log(shipId);
+
     ship.src = `media/imgs/ships/70px-${shipName}Icon.png`;
-    //ship.className = shipRarity;
     division.className = shipRarity
     division.id = shipName + i;
     division2.id = shipName + i + 'd';
     division2.style = 'font-size:11px; width:70px; background-color: black; color: white; text-align: center; white-space: nowrap; overflow: clip;'
     shipLabel.textContent = shipName;
-    //document.querySelector('#orders').appendChild(ship);
     document.querySelector('#orders').appendChild(division);
     document.querySelector('#'+ shipName + i).appendChild(ship);
     document.querySelector('#'+ shipName + i).appendChild(division2);
-    //document.querySelector('#'+ shipName + i + 'd').appendChild(parrafo);
     document.querySelector('#'+ shipName + i + 'd').appendChild(shipLabel);
 }
 
-
 function random(cant){
-    //let number = Math.round(Math.random() * (LIGHTPOOL.length - 1));
     let number = Math.round(Math.random() * cant);
-    //console.log(`random number: ${number}`)
     return number;
 }
 
-function buildingShip(normal, rare, elite, sr){
+function buildingShip(normal, rare, elite, sr, isEvent){
 
     let shipId;
-    let rndNumber = random(100);
+    let rndNumber = random(200);
+    let rates = [60, 102, 24, 14]; //normal, rare, elite, sr
 
-    if (rndNumber === (11) || rndNumber === (22) || rndNumber === (33) || rndNumber === (44) || rndNumber === (55) || rndNumber === (66) || rndNumber === (77)){
-        shipId = random(sr.length - 1);
-        return sr[shipId];
-    }else if (rndNumber === (12) ||
-        rndNumber === (21) ||
-        rndNumber === (23) ||
-        rndNumber === (32) ||
-        rndNumber === (34) ||
-        rndNumber === (43) ||
-        rndNumber === (45) ||
-        rndNumber === (54) ||
-        rndNumber === (56) ||
-        rndNumber === (65) ||
-        rndNumber === (67) ||
-        rndNumber === (76)){
-            shipId = random(elite.length - 1);
-            return elite[shipId];
-    }else if (rndNumber === (9) ||
-        rndNumber === (10) ||
-        rndNumber === (13) ||
-        rndNumber === (14) ||
-        rndNumber === (19) ||
-        rndNumber === (20) ||
-        rndNumber === (24) ||
-        rndNumber === (25) ||
-        rndNumber === (30) ||
-        rndNumber === (31) ||
-        rndNumber === (35) ||
-        rndNumber === (36) ||
-        rndNumber === (41) ||
-        rndNumber === (42) ||
-        rndNumber === (46) ||
-        rndNumber === (47) ||
-        rndNumber === (52) ||
-        rndNumber === (53) ||
-        rndNumber === (57) ||
-        rndNumber === (58) ||
-        rndNumber === (63) ||
-        rndNumber === (64) ||
-        rndNumber === (68) ||
-        rndNumber === (69) ||
-        rndNumber === (75) ||
-        rndNumber === (76)){
+    //Common
+    if (rndNumber <= rates[0]){
+        shipId = random(normal.length - 1);
+        return normal[shipId]; 
+    }
+
+    //Rare
+    rndNumber = rndNumber - rates[0];
+    if (rndNumber <= rates[1]){
+        if (isEvent){
+            return eventShip(rare, EVENTPOOLR, rareRate, rndNumber);
+        }else{
             shipId = random(rare.length - 1);
             return rare[shipId];
+        }
+    }
+
+    //Elite
+    rndNumber = rndNumber - rates[1];
+
+    if (rndNumber <= rates[2]){
+        if (isEvent){
+            return eventShip(elite, EVENTPOOLE, eliteRate, rndNumber);
+        }else{
+            shipId = random(elite.length - 1);
+            return elite[shipId];
+        }
+    
     }else{
-        shipId = random(normal.length - 1);
-        return normal[shipId];
+
+        rndNumber = rndNumber - rates[2];
+        if (isEvent){
+            return eventShip(sr, EVENTPOOLSR, srRate, rndNumber);
+        }
+        shipId = random(sr.length - 1);
+        return sr[shipId];
+    }
+
+}
+
+function eventShip(normalBanner, eventBanner, rate, randomNumber){
+
+    let wonEventShip = true;
+
+    if (randomNumber > (eventBanner.length * rate) - 3){
+        wonEventShip = false;
+    }
+
+    if (wonEventShip){
+        for (i = 0; i <= eventBanner.length; i++){
+            if (randomNumber <= rate){
+                return eventBanner[i];
+            }
+            randomNumber = randomNumber - rate;
+            console.log('randomNumber[' + i + '] = ' + randomNumber)
+        }
+
+    }else{
+
+        shipId = random(normalBanner.length - 1);
+        return normalBanner[shipId];
+
     }
 }
 
-function test(poolSelect){
+
+function countItem(pool){
+
+    totalItems = 0;
+
+    if (pool.length < 0){
+        return 0;
+    }
+
+    for (i = 0; i < pool.length; i++){
+            totalItems += 1;
+    }
+
+    return totalItems;
+}
+
+// Test functions ********************************************************
+
+
+function testPoolShips(poolSelect){
     for (let i = Number(0); i<poolSelect.length; i++){
         let ship = document.createElement('img');
         //console.log(`[${i}-${poolSelect[i][0]}] - ${poolSelect[i][1]} length=${poolSelect.length}`);
@@ -542,18 +569,9 @@ function test(poolSelect){
     }
 }
 
-function testUltra(){
+function testOneShip(shipName, rarity){
     let ship = document.createElement('img');
-    ship.src = `media/imgs/ships/70px-New_JerseyIcon.png`;
-    ship.className = 'UltraRare';
+    ship.src = `media/imgs/ships/70px-${shipName}Icon.png`;
+    ship.className = rarity;
     document.querySelector('#orders').appendChild(ship);
 }
-
-//testUltra()
-//test(HEAVYPOOLN);
-//test(HEAVYPOOLR);
-//test(HEAVYPOOLE);
-//test(HEAVYPOOLSR);
-//test(EVENTPOOLE);
-//test(EVENTPOOLSR);
-//buildingShip(LIGHTPOOL);
