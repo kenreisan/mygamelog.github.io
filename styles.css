@@ -1,0 +1,109 @@
+/* Variables para colores de Amazon */
+:root {
+    --amazon-blue: #007185;
+    --amazon-orange: #FFA41C;
+    --amazon-price-red: #B12704;
+    --border-color: #ddd;
+}
+
+/* Estilos para el contenedor principal de la tarjeta */
+.tarjeta-producto-amazon {
+    width: 300px; /* Ancho fijo para el ejemplo */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    background-color: #fff;
+    /* Sombra sutil, típicamente visible solo al pasar el ratón */
+    transition: box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido, como la imagen */
+}
+
+/* Estilos de la imagen */
+.imagen-producto {
+    max-width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-bottom: 10px;
+    object-fit: contain; /* Asegura que la imagen no se recorte */
+}
+
+/* Contenedor de información */
+.info-producto {
+    width: 100%;
+    text-align: left;
+}
+
+/* Título del producto */
+.titulo-producto {
+    font-size: 16px;
+    line-height: 1.3;
+    margin: 0 0 5px 0;
+    height: 3.9em; /* Limita a 3 líneas (1.3 * 3 = 3.9) */
+    overflow: hidden; /* Oculta el texto que se desborda */
+}
+
+.titulo-producto a {
+    color: var(--amazon-blue);
+    text-decoration: none;
+}
+
+.titulo-producto a:hover {
+    color: #c45500; /* Un color ligeramente diferente al pasar el mouse */
+    text-decoration: underline;
+}
+
+/* Valoración y estrellas */
+.valoracion {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.estrellas {
+    color: var(--amazon-orange);
+    margin-right: 5px;
+}
+
+.num-valoraciones {
+    color: #565959; /* Gris sutil */
+    font-size: 13px;
+}
+
+/* Precio */
+.precio {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--amazon-price-red);
+    margin: 5px 0;
+    display: flex;
+    align-items: flex-start; /* Alinea los decimales con la parte superior */
+}
+
+.simbolo-moneda {
+    font-size: 14px;
+    margin-right: 2px;
+    margin-top: 2px;
+}
+
+.precio-entero {
+    font-size: 24px;
+}
+
+.precio-decimal {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* Envío */
+.envio {
+    font-size: 13px;
+    color: #565959;
+}
+
+.envio-gratis {
+    font-weight: bold;
+    color: var(--amazon-blue);
+}
