@@ -6,6 +6,7 @@
   <title>Menú de Productos</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css"> 
+  <link rel="icon" href="favicon.ico">
   <style>
     body {
       background-color: #fffaf5;
@@ -92,7 +93,7 @@
 
     <!-- Sección destacados -->
     <section>
-      <h2 class="mb-4 text-center text-warning">⭐ Productos Destacados</h2>
+      <h2 class="mb-4 text-center text-warning">⭐ Productos Nuevos</h2>
       <div class="row" id="destacados"></div>
     </section>
 
@@ -108,7 +109,7 @@
       {
         nombre: "Bombon con chocolate",
         proveedor: "Taniushkis/Eduardo",
-        cantidad: "12 pzas",
+        nuevo: false,
         tipo: "pieza",
         precio: 10,
         disponible: true,
@@ -117,7 +118,7 @@
       {
         nombre: "Churrito enchilado",
         proveedor: "Taniushkis/Eduardo",
-        cantidad: "5 50g",
+        nuevo: false,
         tipo: "bolsa",
         precio: 10,
         disponible: true,
@@ -126,7 +127,7 @@
       {
         nombre: "Mango deshidratado",
         proveedor: "Taniushkis/Eduardo",
-        cantidad: "7 75g",
+        nuevo: false,
         tipo: "bolsa",
         precio: 25,
         disponible: true,
@@ -135,7 +136,7 @@
       {
         nombre: "Coca Cola 355ml",
         proveedor: "Taniushkis/Eduardo",
-        cantidad: "11 pieza",
+        nuevo: false,
         tipo: "botella",
         precio: 15,
         disponible: true,
@@ -144,7 +145,7 @@
       {
         nombre: "Cazares",
         proveedor: "Taniushkis/Eduardo",
-        cantidad: "1 bolsa",
+        nuevo: false,
         tipo: "bolsa",
         precio: 12,
         disponible: true,
@@ -153,7 +154,7 @@
       {
         nombre: "Boing",
         proveedor: "Montse",
-        cantidad: "1 pieza",
+        nuevo: false,
         tipo: "dulce",
         precio: 20,
         disponible: true,
@@ -162,7 +163,7 @@
       {
         nombre: "Piña deshidratada enchilada",
         proveedor: "Montse",
-        cantidad: "4 pieza",
+        nuevo: false,
         tipo: "pastelito",
         precio: 8,
         disponible: false,
@@ -171,7 +172,7 @@
       {
         nombre: "Mazapán Almendra x2",
         proveedor: "Taniushkis/Eduardo",
-        cantidad: "pieza",
+        nuevo: false,
         tipo: "mazapán",
         precio: 16,
         disponible: true,
@@ -180,15 +181,84 @@
       {
         nombre: "Pan de dulce",
         proveedor: "Taniushkis/Eduardo",
-        cantidad: "pieza",
+        nuevo: false,
         tipo: "panadería",
         precio: 22,
         disponible: true,
         imagen: "media/pan.jpg"
-      }
+      },
+      {
+        nombre: "Churritos",
+        proveedor: "Taniushkis/Eduardo",
+        nuevo: false,
+        tipo: "panadería",
+        precio: 10,
+        disponible: false,
+        imagen: "media/churrito.jpg"
+      },
+      {
+        nombre: "Peelerz Mango",
+        info: "Paquete de 65g",
+        proveedor: "Taniushkis/Eduardo",
+        nuevo: true,
+        tipo: "panadería",
+        precio: 10,
+        disponible: true,
+        imagen: "media/peelerz_mango.webp"
+      },
+      {
+        nombre: "Peelerz Durazno",
+        info: "Paquete de 65g",
+        proveedor: "Taniushkis/Eduardo",
+        nuevo: true,
+        tipo: "panadería",
+        precio: 10,
+        disponible: true,
+        imagen: "media/peelerz_durazno.webp"
+      },
+      {
+        nombre: "Peelerz Uva",
+        info: "Paquete de 65g",
+        proveedor: "Taniushkis/Eduardo",
+        nuevo: true,
+        tipo: "panadería",
+        precio: 10,
+        disponible: true,
+        imagen: "media/peelerz_uva.webp"
+      },
+      {
+        nombre: "Peelerz Platano",
+        info: "Paquete de 65g",
+        proveedor: "Taniushkis/Eduardo",
+        nuevo: true,
+        tipo: "panadería",
+        precio: 10,
+        disponible: true,
+        imagen: "media/peelerz_platano.png"
+      },
+      {
+        nombre: "Peelerz Manzana",
+        info: "Paquete de 65g",
+        proveedor: "Taniushkis/Eduardo",
+        nuevo: true,
+        tipo: "panadería",
+        precio: 10,
+        disponible: true,
+        imagen: "media/peelerz_manzana.webp"
+      },
+      {
+        nombre: "Peelerz Partes del cuerpo",
+        info: "Paquete de 65g",
+        proveedor: "Taniushkis/Eduardo",
+        nuevo: true,
+        tipo: "panadería",
+        precio: 10,
+        disponible: true,
+        imagen: "media/peelerz_partes.webp"
+      },
     ];
 
-    const destacados = productos.filter(p => p.precio >= 15);
+    const destacados = productos.filter(p => p.nuevo == true);
     const contenedorDestacados = document.getElementById('destacados');
     const contenedorProductos = document.getElementById('productos');
 
@@ -201,7 +271,7 @@
 
       return `
 
-      <div class="col-md-3 mb-3 tarjeta-producto-amazon">
+      <div class="col-md-3 col-12 mb-3 tarjeta-producto-amazon">
         
             <a href="#" class="enlace-producto">
                 <img src="${imagenSrc}" alt="${producto.nombre}" class="imagen-producto">
@@ -211,6 +281,9 @@
                     <a href="#">${producto.nombre}</a>
                     <br><small>${producto.info}</small>
                 </h3>
+            <div class="">
+                <small>${badgeDisponibilidad}</small>
+            </div>
             <div class="valoracion">
                 <span class="estrellas">★★★★★</span>
                 <span class="num-valoraciones">(1,234)</span>
@@ -246,7 +319,7 @@
       contenedor.innerHTML = lista.map(crearCard).join('');
     }
 
-    //mostrarProductos(destacados, contenedorDestacados);
+    mostrarProductos(destacados, contenedorDestacados);
     mostrarProductos(productos, contenedorProductos);
 
     document.getElementById('searchInput').addEventListener('input', e => {

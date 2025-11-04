@@ -79,7 +79,7 @@
     color: var(--amazon-price-red);
     margin: 5px 0;
     display: flex;
-    align-items: flex-start; /* Alinea los decimales con la parte superior */
+    align-items: flex-end; /* Alinea los decimales con la parte superior */
 }
 
 .simbolo-moneda {
@@ -89,11 +89,12 @@
 }
 
 .precio-entero {
-    font-size: 24px;
+    font-size: 30px;
+    padding-top: 20;
 }
 
 .precio-decimal {
-    font-size: 14px;
+    font-size: 10px;
     font-weight: normal;
 }
 
