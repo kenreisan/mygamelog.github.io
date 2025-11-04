@@ -83,7 +83,7 @@
 
   <header>
     <h1>Menú de Productos</h1>
-    <p>Snacks, dulces y bebidas — Taniushkis & Montse</p>
+    <p>Snacks, dulces y bebidas</p>
   </header>
 
   <div class="container">
@@ -93,19 +93,39 @@
 
     <!-- Sección destacados -->
     <section>
-      <h2 class="mb-4 text-center text-warning">⭐ Productos Nuevos</h2>
+      <h2 class="mb-4 text-center text-warning">🆕✨ Productos Nuevos</h2>
       <div class="row" id="destacados"></div>
     </section>
 
     <!-- Todos los productos -->
     <section>
-      <h2 class="mb-4 text-center text-success">Todos los Productos</h2>
+      <h2 class="mb-4 text-center text-success">--- Todos los Productos ---</h2>
       <div class="row" id="productos"></div>
     </section>
   </div>
 
   <script>
     const productos = [
+      {
+        nombre: "Bolsa de Papas",
+        proveedor: "Taniushkis/Eduardo",
+        info: "Bolsa individual",
+        nuevo: false,
+        tipo: "pieza",
+        precio: 19,
+        disponible: true,
+        imagen: "media/papas.jpg"
+      },
+      {
+        nombre: "Galletas",
+        proveedor: "Taniushkis/Eduardo",
+        info: "Paquete individual",
+        nuevo: false,
+        tipo: "pieza",
+        precio: 22,
+        disponible: true,
+        imagen: "media/galletas.jpg"
+      },
       {
         nombre: "Bombon con chocolate",
         proveedor: "Taniushkis/Eduardo",
@@ -114,6 +134,16 @@
         precio: 10,
         disponible: true,
         imagen: "media/tapon.webp"
+      },
+      {
+        nombre: "Suspiros",
+        proveedor: "Taniushkis/Eduardo",
+        info: "Bolsita. Galleta cubierta con chocolate",
+        nuevo: false,
+        tipo: "Bolsita",
+        precio: 15,
+        disponible: true,
+        imagen: "media/suspiros.jpg"
       },
       {
         nombre: "Churrito enchilado",
@@ -152,6 +182,16 @@
         imagen: "media/cazares.png"
       },
       {
+        nombre: "Dulce sabor tamarindo Karla",
+        proveedor: "Taniushkis/Eduardo",
+        info: "Paquete de 2 vasitos",
+        nuevo: false,
+        tipo: "bolsa",
+        precio: 12,
+        disponible: true,
+        imagen: "media/karla.webp"
+      },
+      {
         nombre: "Boing",
         proveedor: "Montse",
         nuevo: false,
@@ -165,8 +205,8 @@
         proveedor: "Montse",
         nuevo: false,
         tipo: "pastelito",
-        precio: 8,
-        disponible: false,
+        precio: 20,
+        disponible: true,
         imagen: "media/pina.png"
       },
       {
@@ -198,61 +238,61 @@
       },
       {
         nombre: "Peelerz Mango",
-        info: "Paquete de 65g",
+        info: "Paquete de 62g",
         proveedor: "Taniushkis/Eduardo",
         nuevo: true,
         tipo: "panadería",
-        precio: 10,
+        precio: 55,
         disponible: true,
         imagen: "media/peelerz_mango.webp"
       },
       {
         nombre: "Peelerz Durazno",
-        info: "Paquete de 65g",
+        info: "Paquete de 62g",
         proveedor: "Taniushkis/Eduardo",
         nuevo: true,
         tipo: "panadería",
-        precio: 10,
+        precio: 55,
         disponible: true,
         imagen: "media/peelerz_durazno.webp"
       },
       {
         nombre: "Peelerz Uva",
-        info: "Paquete de 65g",
+        info: "Paquete de 62g",
         proveedor: "Taniushkis/Eduardo",
         nuevo: true,
         tipo: "panadería",
-        precio: 10,
+        precio: 55,
         disponible: true,
         imagen: "media/peelerz_uva.webp"
       },
       {
         nombre: "Peelerz Platano",
-        info: "Paquete de 65g",
+        info: "Paquete de 62g",
         proveedor: "Taniushkis/Eduardo",
         nuevo: true,
         tipo: "panadería",
-        precio: 10,
+        precio: 55,
         disponible: true,
         imagen: "media/peelerz_platano.png"
       },
       {
         nombre: "Peelerz Manzana",
-        info: "Paquete de 65g",
+        info: "Paquete de 62g",
         proveedor: "Taniushkis/Eduardo",
         nuevo: true,
         tipo: "panadería",
-        precio: 10,
+        precio: 55,
         disponible: true,
         imagen: "media/peelerz_manzana.webp"
       },
       {
         nombre: "Peelerz Partes del cuerpo",
-        info: "Paquete de 65g",
+        info: "Paquete individual",
         proveedor: "Taniushkis/Eduardo",
         nuevo: true,
         tipo: "panadería",
-        precio: 10,
+        precio: 5,
         disponible: true,
         imagen: "media/peelerz_partes.webp"
       },
