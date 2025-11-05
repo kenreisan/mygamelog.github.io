@@ -221,11 +221,22 @@
       {
         nombre: "Pan de dulce",
         proveedor: "Taniushkis/Eduardo",
-        nuevo: false,
+        info: "¡Hoy hay pan!",
+        nuevo: true,
         tipo: "panadería",
         precio: 22,
         disponible: true,
         imagen: "media/pan.jpg"
+      },
+      {
+        nombre: "Tortillas",
+        info: "SI, ES EN SERIO. <br>Pieza",
+        proveedor: "Taniushkis/Eduardo",
+        nuevo: true,
+        tipo: "panadería",
+        precio: 1,
+        disponible: true,
+        imagen: "media/tortilla.webp"
       },
       {
         nombre: "Churritos",
@@ -237,54 +248,14 @@
         imagen: "media/churrito.jpg"
       },
       {
-        nombre: "Peelerz Mango",
-        info: "Paquete de 62g",
+        nombre: "Peelerz",
+        info: "Sabores: mango, platano, durazno, uva, manzana. Paquete individual 62g",
         proveedor: "Taniushkis/Eduardo",
         nuevo: true,
         tipo: "panadería",
         precio: 55,
         disponible: true,
-        imagen: "media/peelerz_mango.webp"
-      },
-      {
-        nombre: "Peelerz Durazno",
-        info: "Paquete de 62g",
-        proveedor: "Taniushkis/Eduardo",
-        nuevo: true,
-        tipo: "panadería",
-        precio: 55,
-        disponible: true,
-        imagen: "media/peelerz_durazno.webp"
-      },
-      {
-        nombre: "Peelerz Uva",
-        info: "Paquete de 62g",
-        proveedor: "Taniushkis/Eduardo",
-        nuevo: true,
-        tipo: "panadería",
-        precio: 55,
-        disponible: true,
-        imagen: "media/peelerz_uva.webp"
-      },
-      {
-        nombre: "Peelerz Platano",
-        info: "Paquete de 62g",
-        proveedor: "Taniushkis/Eduardo",
-        nuevo: true,
-        tipo: "panadería",
-        precio: 55,
-        disponible: true,
-        imagen: "media/peelerz_platano.png"
-      },
-      {
-        nombre: "Peelerz Manzana",
-        info: "Paquete de 62g",
-        proveedor: "Taniushkis/Eduardo",
-        nuevo: true,
-        tipo: "panadería",
-        precio: 55,
-        disponible: true,
-        imagen: "media/peelerz_manzana.webp"
+        imagen: "media/peelerz.jpg"
       },
       {
         nombre: "Peelerz Partes del cuerpo",
@@ -295,7 +266,7 @@
         precio: 5,
         disponible: true,
         imagen: "media/peelerz_partes.webp"
-      },
+      }
     ];
 
     const destacados = productos.filter(p => p.nuevo == true);
